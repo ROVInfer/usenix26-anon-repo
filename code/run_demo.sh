@@ -27,6 +27,13 @@ else
     echo "[Init] Output directory exists: $OUTPUT_DIR"
 fi
 
+echo "Preparation: downloading ribs..."
+mkdir -p ../sample_input/rib/2025-08/ripe/rrc00
+mkdir -p ../sample_input/rib/2025-08/routeviews/route-views3
+wget -O ../sample_input/rib/2025-08/ripe/rrc00/bview.20250804.0800.gz https://data.ris.ripe.net/rrc00/2025.08/bview.20250804.0800.gz
+wget -O ../sample_input/rib/2025-08/routeviews/route-views3/rib.20250804.0800.bz2 https://routeviews.org/route-views3/bgpdata/2025.08/RIBS/rib.20250804.0800.bz2
+echo "Done."
+
 # Step 1: Control Plane Analysis
 echo ""
 echo "[Step 1/5] Running Control Plane Analysis (fire_cp.py)..."

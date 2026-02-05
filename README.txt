@@ -11,6 +11,9 @@ probabilities at the interface level.
 
 - sample_input/
   A subset of input data (RIBs, PeeringDB, AS Relationships) for the Demo.
+  Note that due to file size limits, the BGP dataset must be downloaded 
+  before running the demo. This step is integrated into run_demo.sh, 
+  so no manual action is required.
 
 - sample_mid_data/
   Cached active measurement results (Atlas traceroutes, Nmap scans) used to 
@@ -28,7 +31,6 @@ probabilities at the interface level.
 --------------------------------------------------------------------------------
 2. GETTING STARTED (DOCKER RECOMMENDED)
 --------------------------------------------------------------------------------
-
 We strongly recommend using Docker to ensure all system dependencies (e.g., nmap)
 and Python libraries are correctly configured.
 
